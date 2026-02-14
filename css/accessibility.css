@@ -1,0 +1,367 @@
+/* ============================================
+   Reut Klein - Accessibility Styles
+   WCAG 2.0 AA Compliance
+   ============================================ */
+
+/* ---------- Focus Indicators ---------- */
+*:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Accessibility Widget ---------- */
+.accessibility-widget {
+  position: fixed;
+  bottom: 100px;
+  left: 24px;
+  z-index: 950;
+}
+
+.accessibility-toggle {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-round);
+  background: var(--color-secondary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.accessibility-toggle:hover,
+.accessibility-toggle:focus-visible {
+  background: var(--color-primary-dark);
+  transform: scale(1.05);
+}
+
+.accessibility-toggle svg {
+  width: 26px;
+  height: 26px;
+}
+
+.accessibility-panel {
+  position: absolute;
+  bottom: 64px;
+  left: 0;
+  width: 300px;
+  background: var(--color-bg-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all var(--transition-normal);
+}
+
+body.ltr .accessibility-panel {
+  left: 0;
+  right: auto;
+}
+
+.accessibility-panel.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.accessibility-panel__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-sm);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accessibility-panel__close {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-round);
+  color: var(--color-text-light);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background var(--transition-fast);
+}
+
+.accessibility-panel__close:hover {
+  background: var(--color-primary-light);
+}
+
+.accessibility-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.accessibility-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text);
+  background: transparent;
+  width: 100%;
+}
+
+.accessibility-option:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.accessibility-option.active {
+  border-color: var(--color-accent);
+  background: rgba(201, 169, 110, 0.1);
+  color: var(--color-secondary);
+}
+
+.accessibility-option svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-secondary);
+}
+
+.accessibility-reset {
+  width: 100%;
+  margin-top: var(--spacing-sm);
+  padding: 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: transparent;
+  text-align: center;
+}
+
+.accessibility-reset:hover {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+/* ---------- Accessibility Mode Overrides ---------- */
+
+/* High Contrast */
+body.high-contrast {
+  --color-bg: #000000;
+  --color-bg-white: #000000;
+  --color-bg-cream: #1a1a1a;
+  --color-text: #FFFFFF;
+  --color-text-light: #FFFFFF;
+  --color-secondary: #FFFFFF;
+  --color-border: #FFFFFF;
+  --color-primary-light: #333333;
+}
+
+body.high-contrast .header {
+  background: #000;
+  border-bottom-color: #fff;
+}
+
+body.high-contrast .footer {
+  background: #000;
+  border-top: 2px solid #fff;
+}
+
+body.high-contrast a,
+body.high-contrast .nav__link {
+  color: #FFFF00;
+}
+
+body.high-contrast a:hover {
+  text-decoration: underline;
+}
+
+body.high-contrast .btn--primary {
+  background: #FFFF00;
+  color: #000;
+  border-color: #FFFF00;
+}
+
+body.high-contrast .btn--primary:hover {
+  background: #000;
+  color: #FFFF00;
+}
+
+body.high-contrast .service-card,
+body.high-contrast .product-card,
+body.high-contrast .contact-form {
+  background: #1a1a1a;
+  border: 1px solid #fff;
+}
+
+body.high-contrast .form-group input,
+body.high-contrast .form-group textarea {
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+body.high-contrast .gallery-item__overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Grayscale */
+body.grayscale {
+  filter: grayscale(100%);
+}
+
+/* Highlight Links */
+body.highlight-links a {
+  text-decoration: underline !important;
+  font-weight: bold !important;
+  color: var(--color-accent) !important;
+}
+
+body.highlight-links a:hover {
+  color: var(--color-primary-dark) !important;
+}
+
+/* Readable Font */
+body.readable-font,
+body.readable-font * {
+  font-family: Arial, Helvetica, sans-serif !important;
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+}
+
+/* Big Cursor */
+body.big-cursor,
+body.big-cursor * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M8 4l28 20h-16l8 16-6 3-8-16-6 9z' fill='%23000' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E"), auto !important;
+}
+
+body.big-cursor a,
+body.big-cursor button,
+body.big-cursor [role="button"],
+body.big-cursor input[type="submit"] {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M20 4c-4.4 0-8 3.6-8 8v16c0 8.8 7.2 16 16 16s16-7.2 16-16v-8c0-4.4-3.6-8-8-8h0c-.7 0-1.4.1-2 .3V12c0-4.4-3.6-8-8-8h0c-.7 0-1.4.1-2 .3V8c0-4.4-3.6-8-8-8z' fill='%23fff' stroke='%23000' stroke-width='2'/%3E%3C/svg%3E"), pointer !important;
+}
+
+/* Stop Animations */
+body.stop-animations *,
+body.stop-animations *::before,
+body.stop-animations *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Font Size Adjustments */
+body.font-size-increase {
+  font-size: 120%;
+}
+
+body.font-size-increase-2 {
+  font-size: 140%;
+}
+
+body.font-size-decrease {
+  font-size: 85%;
+}
+
+/* ---------- Screen Reader Only (sr-only) ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ---------- Accessibility Statement ---------- */
+.accessibility-statement {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.accessibility-statement h2 {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.accessibility-statement p,
+.accessibility-statement li {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-xs);
+}
+
+.accessibility-statement ul {
+  list-style: disc;
+  padding-right: var(--spacing-md);
+}
+
+body.ltr .accessibility-statement ul {
+  padding-right: 0;
+  padding-left: var(--spacing-md);
+}
+
+/* ---------- Responsive Accessibility Widget ---------- */
+@media (max-width: 768px) {
+  .accessibility-widget {
+    bottom: 84px;
+    left: 16px;
+  }
+
+  .accessibility-toggle {
+    width: 46px;
+    height: 46px;
+  }
+
+  .accessibility-toggle svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .accessibility-panel {
+    width: 280px;
+    left: 0;
+    bottom: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accessibility-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+}

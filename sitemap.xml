@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Hebrew Pages -->
+  <url>
+    <loc>https://www.reutklein.co.il/</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.reutklein.co.il/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.reutklein.co.il/en/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.reutklein.co.il/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.reutklein.co.il/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.reutklein.co.il/en/about.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.reutklein.co.il/portfolio.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.reutklein.co.il/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.reutklein.co.il/en/portfolio.html"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.reutklein.co.il/guides.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.reutklein.co.il/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.reutklein.co.il/en/guides.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.reutklein.co.il/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.reutklein.co.il/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.reutklein.co.il/en/contact.html"/>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- English Pages -->
+  <url>
+    <loc>https://www.reutklein.co.il/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.reutklein.co.il/en/"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.reutklein.co.il/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.reutklein.co.il/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.reutklein.co.il/en/about.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.reutklein.co.il/about.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.reutklein.co.il/en/portfolio.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.reutklein.co.il/en/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.reutklein.co.il/portfolio.html"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.reutklein.co.il/en/guides.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.reutklein.co.il/en/guides.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.reutklein.co.il/guides.html"/>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.reutklein.co.il/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.reutklein.co.il/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://www.reutklein.co.il/contact.html"/>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Landing Page -->
+  <url>
+    <loc>https://www.reutklein.co.il/landing/</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>
