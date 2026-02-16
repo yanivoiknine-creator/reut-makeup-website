@@ -332,6 +332,28 @@ body.ltr .nav__link::after {
   background: var(--color-primary-light);
 }
 
+/* Header Social Icon */
+.header__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-round);
+  color: var(--color-text-light);
+  transition: all var(--transition-fast);
+}
+
+.header__social:hover {
+  color: #E1306C;
+  background: var(--color-primary-light);
+  transform: scale(1.1);
+}
+
+.header__social svg {
+  display: block;
+}
+
 /* Mobile Menu Toggle */
 .nav__toggle {
   display: none;
@@ -1214,6 +1236,173 @@ body.ltr .fade-in-left {
 .mb-1 { margin-bottom: var(--spacing-sm); }
 .mb-2 { margin-bottom: var(--spacing-md); }
 .mb-3 { margin-bottom: var(--spacing-lg); }
+
+/* ---------- Accessibility Statement Modal ---------- */
+.a11y-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+  padding: var(--spacing-md);
+}
+
+.a11y-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.a11y-modal {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  max-width: 700px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: var(--spacing-lg);
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+
+.a11y-modal__close {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  border-radius: var(--radius-round);
+  transition: all var(--transition-fast);
+}
+
+body.ltr .a11y-modal__close {
+  left: auto;
+  right: 16px;
+}
+
+.a11y-modal__close:hover {
+  background: var(--color-primary-light);
+  color: var(--color-text);
+}
+
+.a11y-modal h2 {
+  margin-bottom: var(--spacing-md);
+  font-size: 1.5rem;
+}
+
+.a11y-modal h3 {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.a11y-modal p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: var(--spacing-sm);
+}
+
+.a11y-modal ul {
+  list-style: disc;
+  padding-right: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+body.ltr .a11y-modal ul {
+  padding-right: 0;
+  padding-left: var(--spacing-md);
+}
+
+.a11y-modal li {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-light);
+  margin-bottom: 4px;
+}
+
+/* ---------- Cookie Consent Banner ---------- */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-secondary);
+  color: #fff;
+  padding: var(--spacing-md);
+  z-index: 2500;
+  transform: translateY(100%);
+  transition: transform var(--transition-normal);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cookie-consent.active {
+  transform: translateY(0);
+}
+
+.cookie-consent__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.cookie-consent__text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.cookie-consent__buttons {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+}
+
+.cookie-consent__btn {
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+  font-family: inherit;
+}
+
+.cookie-consent__btn--accept {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.cookie-consent__btn--accept:hover {
+  background: var(--color-accent-light);
+  color: var(--color-text);
+}
+
+.cookie-consent__btn--decline {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cookie-consent__btn--decline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
 
 /* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {

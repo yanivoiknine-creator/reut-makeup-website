@@ -197,6 +197,17 @@
     padding: var(--spacing-lg) 0;
   }
 
+  /* Cookie consent */
+  .cookie-consent__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Accessibility modal */
+  .a11y-modal {
+    padding: var(--spacing-md);
+  }
+
   /* WhatsApp float */
   .whatsapp-float {
     width: 52px;
@@ -219,6 +230,10 @@
   body.ltr .lang-switch {
     margin-left: 0;
     margin-right: var(--spacing-sm);
+  }
+
+  .header__social {
+    order: -1;
   }
 }
 
@@ -321,7 +336,9 @@
   .whatsapp-float,
   .accessibility-widget,
   .nav__toggle,
-  .lightbox {
+  .lightbox,
+  .cookie-consent,
+  .a11y-modal-overlay {
     display: none !important;
   }
 
